@@ -1,0 +1,23 @@
+﻿@model TrainSystem.ViewModels.DataViews.Trains.EditVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Edit Train</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" action="/Trains/Edit" method="post">
+        @Html.HiddenFor(m => m.Id)
+        <label>Train Number: </label>
+        @Html.TextBoxFor(m => m.TrainNum)
+        @Html.ValidationMessageFor(m => m.TrainNum)
+        <label>Type: </label>
+        @Html.TextBoxFor(m => m.TrainType)
+        @Html.ValidationMessageFor(m => m.TrainType)
+        <label>Capacity: </label>
+        @Html.TextBoxFor(m => m.Capacity)
+        @Html.ValidationMessageFor(m => m.Capacity)
+        <button class="right-btn" type="submit">Save</button>
+    </form>
+</body>

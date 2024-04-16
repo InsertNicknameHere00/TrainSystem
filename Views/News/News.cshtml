@@ -1,0 +1,39 @@
+﻿@using TrainSystem.Entities;
+@using TrainSystem.Extensions;
+@model TrainSystem.ViewModels.DataViews.Newsletter.IndexVM
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | News</title>
+    <link rel="stylesheet" href="~/css/News.css">
+</head>
+<body>
+    <div class="container">
+        <div>ID</div>
+        <div>Title</div>
+        <div>Text</div>
+        <div>Station Id</div>
+        <div>Author</div>
+        <div>Date</div>
+        <div>Action</div>
+
+        @foreach(var item in Model.Items)
+        {
+            <div>@item.Id</div>
+            <div>@item.Title</div>
+            <div>@item.Text</div>
+            <div>@item.StationId</div>
+            <div>@item.Author</div>
+            <div>@item.CreationDate</div>
+            <div>
+                <button class="btn"><a href="/News/Edit?id=@item.Id">Edit</a></button>
+                <button class="btn"><a href="/News/Delete?id=@item.Id" onclick="return confirm('Delete item?')">Delete</a></button>
+            </div>
+        }
+        
+    </div>
+
+    <button class="create-btn"><a href="/News/Create">Create</a></button>
+</body>

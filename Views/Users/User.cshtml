@@ -1,0 +1,41 @@
+﻿@using TrainSystem.Entities;
+@using TrainSystem.Extensions;
+@model TrainSystem.ViewModels.Users.IndexVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/usercss.css">
+    <title>User</title>
+   
+</head>
+<body>
+
+    <div class="container">
+        <div>UserID</div>
+        <div>FirstName</div>
+        <div>LastName</div>
+        <div>Username</div>
+        <div>Password</div>
+        <div>Email</div>
+        <div>Action</div>
+
+        @foreach(var item in Model.Items)
+        { 
+        <div>@item.Id</div>
+        <div>@item.Firstname</div>
+        <div>@item.Lastname</div>
+        <div>@item.Username</div>
+        <div>@item.Password</div>
+        <div>@item.Email</div>
+        <div>
+            <button class="btn"><a href="/Users/Edit?id=@item.Id">Edit</a></button>
+            <button class="btn"><a href="/Users/Delete?id=@item.Id" onclick="return confirm('Delete item?')">Delete</a></button>
+        </div>
+        }
+    </div>
+
+    <button class="create-btn"><a href="/Users/Create">Create</a></button>
+    
+
+</body>

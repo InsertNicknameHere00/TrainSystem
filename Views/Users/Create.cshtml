@@ -1,0 +1,28 @@
+﻿@model TrainSystem.ViewModels.Users.CreateVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Create User</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" method="post">
+        <label>Username: </label>
+        @Html.TextBoxFor(m => m.Username)
+        @Html.ValidationMessageFor(m => m.Username)
+        <label>Password: </label>
+        @Html.TextBoxFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+        <label>Firstname: </label>
+        @Html.TextBoxFor(m => m.Firstname)
+        @Html.ValidationMessageFor(m => m.Firstname)
+        <label>Lastname: </label>
+        @Html.TextBoxFor(m => m.Lastname)
+        @Html.ValidationMessageFor(m => m.Lastname)
+        <label>Email:</label>
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+        <button class="right-btn" type="submit">Create</button>
+    </form>
+</body>

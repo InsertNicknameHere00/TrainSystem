@@ -1,0 +1,22 @@
+﻿@model TrainSystem.ViewModels.DataViews.Tickets.CreateVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Create Ticket</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" method="post">
+        <label>RouteId: </label>
+        @Html.TextBoxFor(m => m.RouteId)
+        @Html.ValidationMessageFor(m => m.RouteId)
+        <label>Price: </label>
+        @Html.TextBoxFor(m => m.Price)
+        @Html.ValidationMessageFor(m => m.Price)
+        <label>User ID: </label>
+        @Html.TextBoxFor(m => m.UserId)
+        @Html.ValidationMessageFor(m => m.UserId)
+        <button class="right-btn" type="submit">Create</button>
+    </form>
+</body>

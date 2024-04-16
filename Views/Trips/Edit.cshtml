@@ -1,0 +1,29 @@
+﻿@model TrainSystem.ViewModels.DataViews.Trips.EditVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Edit Trip</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" action="/Trips/Edit" method="post">
+        @Html.HiddenFor(m => m.Id)
+        <label>Train ID: </label>
+        @Html.TextBoxFor(m => m.TrainId)
+        @Html.ValidationMessageFor(m => m.TrainId)
+        <label>Start Point: </label>
+        @Html.TextBoxFor(m => m.StartPoint)
+        @Html.ValidationMessageFor(m => m.StartPoint)
+        <label>End Point: </label>
+        @Html.TextBoxFor(m => m.EndPoint)
+        @Html.ValidationMessageFor(m => m.EndPoint)
+        <label>Departure Time: </label>
+        @Html.TextBoxFor(m => m.DepartureTime)
+        @Html.ValidationMessageFor(m => m.DepartureTime)
+        <label>Arrival Time: </label>
+        @Html.TextBoxFor(m => m.ArrivalTime)
+        @Html.ValidationMessageFor(m => m.ArrivalTime)
+        <button class="right-btn" type="submit">Save</button>
+    </form>
+</body>

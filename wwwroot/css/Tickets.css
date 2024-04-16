@@ -1,0 +1,41 @@
+﻿.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: auto;
+    width: 80%;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+.btn {
+    background-color: cadetblue;
+    color: white;
+    padding: 0.5rem;
+}
+
+    .btn:hover {
+        cursor: pointer;
+        background-color: darkcyan;
+        color: white;
+    }
+
+.create-btn {
+    background-color: cadetblue;
+    color: white;
+    padding: 0.5rem;
+}
+
+    .create-btn:hover {
+        cursor: pointer;
+        background-color: darkcyan;
+        color: white;
+    }
+
+a {
+    text-decoration: none;
+    padding: 0rem 3rem;
+    color: white;
+}

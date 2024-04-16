@@ -1,0 +1,53 @@
+﻿@using TrainSystem.Entities;
+@using TrainSystem.Extensions;
+@{
+    User loggedUser = this.ViewContext.HttpContext.Session.GetObject<User>("loggedUser");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+
+    @* <header>
+        Hello, <b>
+            @(loggedUser == null
+                ? "Annonymous"
+                : loggedUser.Username)
+        </b>
+    </header>
+ *@
+    <nav class="nav">
+        <ul class="ul-list">
+            <li><a href="/Home/Index">Home</a></li>
+
+                <li><a href="/Users/User">Users</a></li>
+                <li><a href="/Tickets/Tickets">Tickets</a></li>
+                <li><a href="/Trains/Trains">Trains</a></li>
+                <li><a href="/Trips/Trips">Trips</a></li>
+                <li><a href="/Stations/Stations">Stations</a></li>
+                <li><a href="/News/News">News</a></li>
+                <!--<li><a href="/Home/Logout">LOGOUT</a></li>
+
+                <li>
+                    <a href="/Home/Login">LOGIN</a>
+                </li>-->
+
+        </ul>
+    </nav>
+
+    
+    <main>
+        @RenderBody()  
+    </main>
+    
+
+</body>
+</html>

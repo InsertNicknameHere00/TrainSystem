@@ -1,0 +1,47 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+    margin: 0rem 0rem 15rem 0rem;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+
+.nav {
+    width: 100%;
+    box-shadow: 0px 8px 10px black;
+    margin-bottom: 5rem;
+}
+
+.ul-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-list li {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+}
+
+.ul-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.ul-list li a:hover {
+    color: grey;
+}

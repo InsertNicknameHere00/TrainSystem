@@ -1,0 +1,16 @@
+﻿@model TrainSystem.ViewModels.DataViews.Stations.CreateVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Create Station</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" method="post">
+        <label>Location: </label>
+        @Html.TextBoxFor(m => m.Location)
+        @Html.ValidationMessageFor(m => m.Location)
+        <button class="right-btn" type="submit">Create</button>
+    </form>
+</body>

@@ -1,0 +1,36 @@
+﻿@using TrainSystem.Entities;
+@using TrainSystem.Extensions;
+@model TrainSystem.ViewModels.DataViews.Trains.IndexVM
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Trains</title>
+    <link rel="stylesheet" href="~/css/Trains.css">
+</head>
+<body>
+    <div class="container">
+        <div>ID</div>
+        <div>Number</div>
+        <div>Type</div>
+        <div>Capacity</div>
+        <div>Action</div>
+
+        @foreach (var item in Model.Items)
+        {
+            <div>@item.Id</div>
+            <div>@item.TrainNum</div>
+            <div>@item.TrainType</div>
+            <div>@item.Capacity</div>
+            <div>
+                <button class="btn"><a href="/Trains/Edit?id=@item.Id">Edit</a></button>
+                <button class="btn"><a href="/Trains/Delete?id=@item.Id" onclick="return confirm('Delete item?')">Delete</a></button>
+            </div>
+        }
+        
+    </div>
+
+    <button class="create-btn"><a href="/Trains/Create">Create</a></button>
+
+</body>

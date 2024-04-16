@@ -1,0 +1,40 @@
+﻿@using TrainSystem.Entities;
+@using TrainSystem.Extensions;
+@model TrainSystem.ViewModels.DataViews.Trips.IndexVM
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Trips</title>
+    <link rel="stylesheet" href="~/css/Trips.css">
+</head>
+<body>
+    <div class="container">
+        <div>ID</div>
+        <div>Train ID</div>
+        <div>Start Point</div>
+        <div>End Point</div>
+        <div>Departure Time</div>
+        <div>Arrival Time</div>
+        <div>Action</div>
+
+        @foreach(var item in Model.Items)
+        {
+            <div>@item.Id</div>
+            <div>@item.TrainId</div>
+            <div>@item.StartPoint</div>
+            <div>@item.EndPoint</div>
+            <div>@item.DepartureTime</div>
+            <div>@item.ArrivalTime</div>
+            <div>
+                <button class="btn"><a href="/Trips/Edit?id=@item.Id">Edit</a></button>
+                <button class="btn"><a href="/Trips/Delete?id=@item.Id" onclick="return confirm('Delete item?')">Delete</a></button>
+            </div>
+        }
+        
+    </div>
+
+    <button class="create-btn"><a href="/Trips/Create">Create</a></button>
+
+</body>

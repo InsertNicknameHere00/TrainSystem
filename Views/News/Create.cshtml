@@ -1,0 +1,29 @@
+﻿
+@model TrainSystem.ViewModels.DataViews.Newsletter.CreateVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Create News</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" method="post">
+        <label>Title: </label>
+        @Html.TextBoxFor(m => m.Title)
+        @Html.ValidationMessageFor(m => m.Title)
+        <label>Text: </label>
+        @Html.TextAreaFor(m => m.Text)
+        @Html.ValidationMessageFor(m => m.Text)
+        <label>Station ID: </label>
+        @Html.TextBoxFor(m => m.StationId)
+        @Html.ValidationMessageFor(m => m.StationId)
+        <label>Author: </label>
+        @Html.TextBoxFor(m => m.Author)
+        @Html.ValidationMessageFor(m => m.Author)
+        <label>Date: </label>
+        @Html.TextBoxFor(m => m.CreationDate)
+        @Html.ValidationMessageFor(m => m.CreationDate)
+        <button class="right-btn" type="submit">Create</button>
+    </form>
+</body>

@@ -1,0 +1,22 @@
+﻿@model TrainSystem.ViewModels.Home.LoginVM
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ | Login</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <form class="log-form" method="post">
+        <div>@Html.HiddenFor(m => m.Url)</div>
+        <label>Username: </label>
+		<div>@Html.TextBoxFor(m => m.Username)</div>
+		<div>@Html.ValidationMessageFor(m => m.Username)</div>
+        <label>Password: </label>
+		<div>@Html.PasswordFor(m => m.Password)</div>
+        <div>@Html.ValidationMessageFor(m => m.Password)</div>
+        <div>@Html.ValidationMessage("authFailed")</div>
+        <button class="right-btn" type="submit">Log in</button>
+    </form>
+</body>
+
